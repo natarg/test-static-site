@@ -1,0 +1,11 @@
+
+version: "3.7"
+services:
+  nginx:
+    container_name: static-test-website
+    image: static-test-website:latest 
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+     - /webserver/certs:/etc/nginx/certs
